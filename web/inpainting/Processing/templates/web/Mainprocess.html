@@ -1,0 +1,62 @@
+{% extends "web/base.html" %}
+{% block title %}
+    <center><h1 style="background-color:yellow">Demo web đồ án môn học</h1></center>
+{% endblock %}
+    
+{% block content %}
+    <div id="ImageProcess">
+        <div class="container-fluid" style="min-height : 85%">
+            <div class="row">
+                <div class="col-sm-2">
+                    <input type="file" id="filetag">
+                </div>
+
+                <div class="col-sm-4">
+                    <canvas id="preview" width="500px" height="500px">
+                </div>
+
+                <div class="col-sm-1">
+                   <center><button id="process" onclick="processImage()" class="button">Auto</button></center>
+                   <center><button id="process2" onclick="processImage2()" class="button">1/2 Auto</button></center>
+                </div>
+
+                <div class="col-sm-4">
+                    <img src="" id="result" width="500px" height="500px">
+                </div>
+            </div>
+        </div>
+        <script src="/static/js/readImage.js"></script>
+    </div>
+    <div id="rating">
+        <input type="radio" id="star5" name="rating" value="5" onclick="calcRate(5)"/>
+        <label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    
+        <input type="radio" id="star4half" name="rating" value="4 and a half" onclick="calcRate(4.5)"/>
+        <label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    
+        <input type="radio" id="star4" name="rating" value="4" onclick="calcRate(4)"/>
+        <label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    
+        <input type="radio" id="star3half" name="rating" value="3 and a half" onclick="calcRate(3.5)"/>
+        <label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    
+        <input type="radio" id="star3" name="rating" value="3" onclick="calcRate(3)"/>
+        <label class = "full" for="star3" title="Meh - 3 stars"></label>
+    
+        <input type="radio" id="star2half" name="rating" value="2 and a half" onclick="calcRate(2.5)"/>
+        <label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    
+        <input type="radio" id="star2" name="rating" value="2" onclick="calcRate(2)"/>
+        <label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    
+        <input type="radio" id="star1half" name="rating" value="1 and a half" onclick="calcRate(1.5)"/>
+        <label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    
+        <input type="radio" id="star1" name="rating" value="1" onclick="calcRate(1)"/>
+        <label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    
+        <input type="radio" id="star0half" name="rating" value="half" onclick="calcRate(0.5)"/>
+        <label class="half" for="star0half" title="Sucks big time - 0.5 stars"></label>
+    </div>
+    <script src="/static/js/star.js"></script>
+{% endblock %}

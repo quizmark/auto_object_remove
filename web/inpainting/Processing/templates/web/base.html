@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>html,body{ height: 100%;background-color: #f6f6f6;}</style>
+    <title></title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/star.css' %}">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body class="bg">
+    <header style="min-height : 10% ;background-color: #ffffff;">
+        <center><img src="{% static 'img/Logo_UIT.jpg' %}" class="responsive-img" style="max-width:100px ;"/></center>
+    </header>
+    <div class="title">
+        {% block title %}
+                
+        {% endblock %}
+    </div>
+    <div class="container-fluid" style="min-height : 75%">
+        <div class="row">
+            <div class="col-sm-1">
+                <div class="bs-sliderbar">
+                    <ul class="nav flex-column" style="background-color: white;">
+                        <li><a  href= "{% url 'home' %}">Trang chủ</a></li>
+                        <li><a  href= "{% url 'contact' %}">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-11">
+                {% block content %}
+                
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    <footer>
+         <div class="container-fluid">
+            <a href="https://www.facebook.com">Facebook</a> | <a href="https://twitter.com/explore">Twitter</a> | <a href="https://www.google.com/intl/vi/gmail/about/">Google</a>
+         </div>
+   </footer>
+</body>
