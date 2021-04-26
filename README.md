@@ -7,7 +7,7 @@
 We propose an approach to removing objects automatically in image problem by using Image Segmentation, Salient Object Detection and Image Inpainting. This application is called **Automatic Object Removal**. The application pipeline can be summarized as delete Non-salient Object using result of Image Segmentation and Salient Object Detection and Image Inpainting to fill deleted holes.
 
 ## Video:
-https://user-images.githubusercontent.com/43707410/116038199-55833e80-a693-11eb-9dcd-c9d8e2dbff8d.mp4
+- https://youtu.be/VcBnSpfdocg
 
 ## Results:
 - Example 1, before:
