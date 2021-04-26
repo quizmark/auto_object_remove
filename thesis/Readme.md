@@ -1,4 +1,4 @@
-# Object Segmentation
+# Image Segmentation
 ```bash
 git clone https://github.com/youngwanLEE/CenterMask.git
 ```
